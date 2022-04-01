@@ -1,0 +1,1 @@
+console.log("This is a Exercise 2 So we will continue on Exercise Section ")
