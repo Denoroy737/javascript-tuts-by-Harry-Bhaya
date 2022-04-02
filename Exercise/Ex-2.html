@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Editable Div Using JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // making a div
+      let div = document.createElement("Div");
+      div.id = "hello";
+      //   making a h1 and adding to div
+      let h1 = document.createElement("h1");
+      h1.innerText = "Hey! What are you seeing just Touch me";
+      h1.id = "heading";
+      div.appendChild(h1);
+      document.body.appendChild(div);
+
+    //   making a textarea 
+      document
+        .getElementById("heading")
+        .addEventListener("click", function (e) {
+          h1.remove();
+          let textarea = document.createElement("textarea");
+          textarea.setAttribute("value", "");
+          textarea.name = "text";
+          textarea.id = "text-area";
+          textarea.cols = "30";
+          textarea.rows = "4";
+          console.log(textarea);
+          div.appendChild(textarea);
+
+        //   adding a text to localStorage
+          textarea.addEventListener("blur", function () {
+            localStorage.setItem("Name", JSON.stringify(textarea.value));
+          });
+        });
+    </script>
+    <h1>We are in Earth</h1>
+  </body>
+</html>
