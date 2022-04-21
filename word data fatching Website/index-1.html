@@ -14,11 +14,12 @@
     <title>Welcome to Code Word</title>
   </head>
   <body>
-      <h1>Welcome to Code Word</h1>
+      <h1 class="">Welcome to Code Word</h1>
 
-      <div class="form-tail">
-          <input type="text" class="Word-Text" placeholder="First name" aria-label="First name">
-          <button type="button" class="btn btn-primary">Get Data</button>
+      <div class="form-tail mt-${}">
+          <input type="text" id="text-input" class="Word-Text" placeholder="Type any Word" value="">
+          <button type="button" id="btn" class="btn btn-primary" onclick="userinput()">Get Data</button>
+          <p id="demo"></p>
       </div>
 
     <!-- Optional JavaScript -->
@@ -38,6 +39,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/tut38.js"></script>
+    <script src="tut38.js"></script>
   </body>
 </html>
