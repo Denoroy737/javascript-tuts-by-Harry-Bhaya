@@ -1,13 +1,12 @@
 body {
   background-image: url(back.jpg);
-  position: absolute;
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
 }
-h1 {
+h1{
   color: rgb(255, 250, 250);
-  display: flex;
-}
+  }
 .Word-Text {
     width: 36%;
     height: 40px;
