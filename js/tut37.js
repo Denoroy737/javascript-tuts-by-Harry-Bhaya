@@ -14,6 +14,7 @@ function enrollStudent(student, callback) {
   }, 1000);
 }
 
+
 function getStudent() {
   setTimeout(function () {
     let str = "";
