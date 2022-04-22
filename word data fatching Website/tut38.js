@@ -2,43 +2,46 @@
 // YOu have to take input from an input tag.
 // You have to print it in the dom
 // If you are using bootstrap then its a plus
-let input_text = document.getElementById("text-input");
 let btn = document.getElementById('btn');
 btn.addEventListener('click', userinput)
 
 
 function userinput() {
-  console.log('You have clicked the btn');
+  let input_text = document.getElementById("text-input").value;
+  console.log('You have clicked the pop handler');
 
-  // if (textinput === ) {
-    
-  // }
   // Instantiate an xhr object
   const xhr = new XMLHttpRequest();
-  
+
   // Open the object
   xhr.open('GET', 'data.json', true);
-  xhr.getResponseHeader('Content-type', 'application/json');
 
-  // what to do when response is ready
-  function hello() {
-    if (this.status === 200) {
-      // console.log(this.responseText);
+
+  var jsonObj = {"word":`${input_text}`};
+Object.keys(jsonObj);  // returns ["person", "age"]
+console.log(jsonObj)
+
+// What to do when response is ready
+xhr.onload = function () {
+  if(this.status === 200){
       let obj = JSON.parse(this.responseText);
-      for (let index = 0; index < obj.results.length; index++) {
-        const element = obj.word[index]["definition"];
-        populate(element);
-        console.log(element);
+      console.log(obj);
+      let list = document.getElementById('list');
+      str = "";
+      for (key in obj)
+      {
+          str += `<li>${obj[key].definition} </li>`;
       }
-    }
-    else {
-      console.log("Some error occured")
-    }
-
-    // send the request
-    xhr.send();
-    console.log("We are done fetching employees!");
+      list.innerHTML = str;
+      console.log(obj)
   }
-  console.log(element); 
+  else{
+      console.log("Some error occured")
+  }
+}
+
+// send the request
+xhr.send();
+console.log("We are done fetching employees!");
 
 }
