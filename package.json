@@ -1,0 +1,23 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kena737/javascript-tuts-by-Harry-Bhaya.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kena737/javascript-tuts-by-Harry-Bhaya/issues"
+  },
+  "homepage": "https://github.com/Kena737/javascript-tuts-by-Harry-Bhaya#readme",
+  "dependencies": {
+    "daisyui": "^2.14.2"
+  }
+}
